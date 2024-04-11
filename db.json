@@ -1,0 +1,59 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "descripcion": "Motocicleta XR 150",
+      "precio": 3000
+    },
+    {
+      "id": "2",
+      "descripcion": "Smart TV 32 pulgadas",
+      "precio": "3567"
+    },
+    {
+      "id": "3",
+      "descripcion": "Lavarropas automático carga frontal",
+      "precio": 500
+    },
+    {
+      "id": "4",
+      "descripcion": "Notebook Galaxy Book3",
+      "precio": 1800
+    },
+    {
+      "id": "5",
+      "descripcion": "Colchon Nantes 190x100",
+      "precio": 300
+    },
+    {
+      "id": "6",
+      "descripcion": "Router Archer C50 V6 negro",
+      "precio": 80
+    },
+    {
+      "id": "8",
+      "descripcion": "Adaptador USB inalámbrico WN8200ND",
+      "precio": 60
+    },
+    {
+      "id": "9",
+      "descripcion": "Celular Samsung A9 v2",
+      "precio": 450
+    },
+    {
+      "id": "10",
+      "descripcion": "Aire Acondicionado LG 3360 frigorías",
+      "precio": 2300
+    },
+    {
+      "id": "7",
+      "descripcion": "Silla Ergonómica B/N reclinable ",
+      "precio": 600
+    },
+    {
+      "id": "12",
+      "descripcion": "pelota",
+      "precio": "12"
+    }
+  ]
+}

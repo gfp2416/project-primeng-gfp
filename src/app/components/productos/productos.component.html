@@ -1,0 +1,71 @@
+<p-table
+    #dt1
+    [value]="productosList"
+    dataKey="id"
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[5, 10, 50]"
+    [paginator]="true"
+    currentPageReportTemplate="Mostrando {first} al {last} de {totalRecords} registros"
+    [globalFilterFields]="['nombre']"
+>
+    <ng-template pTemplate="caption">
+        <div class="flex">
+            <!--<button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>-->
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <!--<input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Buscar..." />-->
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="min-width:15rem">
+                <div class="flex align-items-center">
+                    Código
+                    <p-columnFilter type="numeric" field="id" display="Código"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem">
+                <div class="descripcion">
+                    Descripcion
+                    <p-columnFilter type="text" field="descripcion" display="Descripcion"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem">
+                <div class="Precio">
+                    Precio
+                    <p-columnFilter type="numeric" field="precio" display="Precio" currency="USD"></p-columnFilter>
+                </div>
+            </th>
+            <th style="min-width:15rem">
+                <div class="acciones">
+                    Acciones
+                    <p-columnFilter type="text" field="" display="Acciones"></p-columnFilter>
+                </div>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-producto>
+        <tr>
+            <td>
+                {{ producto.id }}
+            </td>
+            <td>
+                {{ producto.descripcion }}
+            </td>
+            <td>
+                {{ producto.precio }}
+            </td>
+            <td>
+                <p-button icon="pi pi-pencil" pTooltip="Editar" (click)="modifyProducto(producto.id)"></p-button>
+                <p-button icon="pi pi-trash" pTooltip="Eliminar" (click)="deleteProducto(producto.id)"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="7">No se encontraron productos.</td>
+        </tr>
+    </ng-template>
+</p-table>

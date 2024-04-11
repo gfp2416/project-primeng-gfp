@@ -1,0 +1,20 @@
+<p-card  class="card flex justify-content-center">
+    <form [formGroup]="productoForm" (ngSubmit)="createOrUpdateProducto()">
+        <div class="field grid">
+            <label for="id" class="block"styleClass="col-fixed">Código</label>
+            <input type="number" pInputText placeholder="Agregar cóodigo" formControlName="id">
+            <small class="p-error block" *ngIf="productoForm.get('descripcion')?.invalid && productoForm.get('descripcion')?.dirty">El código es obligatorio</small>
+        </div>
+        <div class="field grid">
+            <label for="descripcion" class="block"styleClass="col-fixed">Descripción</label>
+            <input type="text" pInputText placeholder="Agregar descripción" formControlName="descripcion">
+            <small class="p-error block" *ngIf="productoForm.get('descripcion')?.invalid && productoForm.get('descripcion')?.dirty">La descripción es obligatoria</small>
+        </div>
+        <div class="field grid">
+            <label for="precio" class="block"styleClass="col-fixed">Precio</label>
+            <input type="text"  placeholder="####" formControlName="precio">
+            <small class="p-error block" *ngIf="productoForm.get('precio')?.invalid && productoForm.get('precio')?.dirty">El precio es obligatorio</small>
+        </div>
+        <button pButton type="submit" [disabled]="productoForm.invalid">Guardar</button>
+    </form>
+</p-card>
